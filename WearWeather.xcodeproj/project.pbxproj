@@ -13,6 +13,9 @@
 		37FF7403261F097400DBDC87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF7401261F097400DBDC87 /* Main.storyboard */; };
 		37FF7405261F097900DBDC87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF7404261F097900DBDC87 /* Assets.xcassets */; };
 		37FF7408261F097900DBDC87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF7406261F097900DBDC87 /* LaunchScreen.storyboard */; };
+		37FF741326301DBA00DBDC87 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF741226301DBA00DBDC87 /* WeatherManager.swift */; };
+		37FF741A2630575700DBDC87 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF74192630575700DBDC87 /* WeatherData.swift */; };
+		37FF741D26305FA900DBDC87 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF741C26305FA900DBDC87 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		37FF7404261F097900DBDC87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37FF7407261F097900DBDC87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37FF7409261F097900DBDC87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FF741226301DBA00DBDC87 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		37FF74192630575700DBDC87 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		37FF741C26305FA900DBDC87 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,32 @@
 			children = (
 				37FF73FB261F097400DBDC87 /* AppDelegate.swift */,
 				37FF73FD261F097400DBDC87 /* SceneDelegate.swift */,
-				37FF73FF261F097400DBDC87 /* ViewController.swift */,
+				37FF741626301DC000DBDC87 /* Models */,
+				37FF741126301D9600DBDC87 /* Controller */,
 				37FF7401261F097400DBDC87 /* Main.storyboard */,
 				37FF7404261F097900DBDC87 /* Assets.xcassets */,
 				37FF7406261F097900DBDC87 /* LaunchScreen.storyboard */,
 				37FF7409261F097900DBDC87 /* Info.plist */,
 			);
 			path = WearWeather;
+			sourceTree = "<group>";
+		};
+		37FF741126301D9600DBDC87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73FF261F097400DBDC87 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37FF741626301DC000DBDC87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37FF741226301DBA00DBDC87 /* WeatherManager.swift */,
+				37FF741C26305FA900DBDC87 /* WeatherModel.swift */,
+				37FF74192630575700DBDC87 /* WeatherData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FF7400261F097400DBDC87 /* ViewController.swift in Sources */,
+				37FF741A2630575700DBDC87 /* WeatherData.swift in Sources */,
 				37FF73FC261F097400DBDC87 /* AppDelegate.swift in Sources */,
+				37FF741326301DBA00DBDC87 /* WeatherManager.swift in Sources */,
+				37FF741D26305FA900DBDC87 /* WeatherModel.swift in Sources */,
 				37FF73FE261F097400DBDC87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38BPR85JLN;
 				INFOPLIST_FILE = WearWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38BPR85JLN;
 				INFOPLIST_FILE = WearWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
