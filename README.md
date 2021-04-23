@@ -13,4 +13,7 @@
 3. добавить звуковые дорожки: звуки природы, птиц, дождя, ветра
 
 Screen Record:
+
+
+
 ![Screen Record](https://github.com/annagogley/WearWeather/blob/main/screenRecord.gif)
