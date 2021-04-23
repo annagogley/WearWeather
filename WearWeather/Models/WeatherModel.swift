@@ -50,4 +50,128 @@ struct WeatherModel {
             return "aqi.low"
         }
     }
+    
+    var wearAdvice: String {
+        if Int(temperature) < -25 {
+            return """
+Don't forget to keep yourself warm:
+👤 wool hat + hood + scarf
+👕 thermal underwear + sweater + down jacket + mittens
+👖 thermal underwear + jeans/pants + down jumpsuit
+🥾 wool socks + furry shoes
+"""
+        } else if -25 ... -15 ~= Int(temperature) {
+            if conditionName.contains("rain") {
+                return """
+    Don't forget to keep yourself warm and don't forget your umbrella:
+    👤 wool hat + hood + scarf
+    👕 sweater + down jacket + mittens
+    👖 thermal underwear + jeans/pants
+    🥾 wool socks + warm boots
+    """
+            } else {
+                return """
+    Don't forget to keep yourself warm:
+    👤 wool hat + hood + scarf
+    👕 sweater + down jacket + mittens
+    👖 thermal underwear + jeans/pants
+    🥾 wool socks + warm boots
+    """
+            }
+            
+            
+        } else if -14 ... -9 ~= Int(temperature) {
+            if conditionName.contains("rain") {
+                return """
+Have a nice walk and don't forget your umbrella:
+👤 hat + scarf
+👕 sweater + down jacket + gloves
+👖 thermal underwear (optional) + jeans/pants
+🥾 warm socks + warm boots
+"""
+            }
+            else {
+                return """
+    Have a nice walk:
+    👤 hat + scarf
+    👕 sweater + down jacket + gloves
+    👖 thermal underwear (optional) + jeans/pants
+    🥾 warm socks + warm boots
+    """
+            }
+        } else if -8 ... -1 ~= Int(temperature) {
+            if conditionName.contains("rain") {
+                return """
+have a nice walk and don't forget your umbrella:
+👤 hat
+👕 sweater + warm jacket/raincoat + gloves
+👖 thermal underwear (optional) + jeans/pants
+🥾 warm boots/rubber boots
+"""
+            }
+            else {
+                return """
+    have a nice walk:
+    👤 hat
+    👕 sweater + warm jacket + gloves
+    👖 thermal underwear (optional) + jeans/pants
+    🥾 warm boots
+    """
+            }
+        } else if 0 ... 14 ~= Int(temperature) {
+            if conditionName.contains("rain") {
+                return """
+Don't forget umbrella!
+👤 hat(optional)
+👕 shirt + sweatshot/hoody + windbreaker/raincoat
+👖 jeans/pants
+🥾 boots/sneakers/rubber boots
+"""} else {
+    return """
+👤 hat(optional)
+👕 shirt + sweatshot/hoody + windbreaker
+👖 jeans/pants
+🥾 boots/sneakers
+"""
+}
+            
+        } else if 15 ... 23 ~= Int(temperature) {
+            if conditionName.contains("rain")  {
+                return """
+            Don't forget umbrella!
+            👤 SPF + cap
+            👕 shirt + windbreaker/raincoat
+            👖 jeans/pants
+            🥾 boots/sneakers/rubber boots
+            """
+            }
+            else {
+                return """
+👤 SPF 50+ + cap
+👕 shirt + windbreaker
+👖 jeans/pants
+🥾 light boots/sneakers
+"""}
+        } else if Int(temperature) > 23 {
+            if conditionName.contains("rain")  {
+                return """
+            Don't forget umbrella!
+            👤 SPF + cap
+            👕 shirt + raincoat
+            👖 jeans/pants
+            🥾 sneakers/rubber boots
+            """
+            }
+            else {
+                return """
+👤 SPF 50+ + cap
+👕 shirt
+👖 jeans/pants/shorts
+🥾 sneakers/sandals
+"""
+            }
+        } else {
+            return ""
+        }
+    }
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var cityTF: UITextField!
     @IBOutlet weak var descriptionWeather: UILabel!
+    @IBOutlet weak var wearAdvice: UILabel!
     
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
@@ -74,6 +75,8 @@ extension ViewController: WeatherManagerDelegate {
             self.tempValue.text = weather.tempString
             self.weatherIcon.image = UIImage(systemName: weather.conditionName)
             self.descriptionWeather.text = weather.description
+            self.wearAdvice.text = weather.wearAdvice
+            print(weather.conditionName)
         }
         print(weather.tempString)
     }

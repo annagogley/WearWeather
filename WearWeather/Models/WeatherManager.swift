@@ -20,8 +20,14 @@ struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=3dd24617e8aea45e3bc5fba456ab1c1e&units=metric"
     
     func fetchWeather(cityName: String) {
-        let urlString = "\(weatherURL)&q=\(cityName)"
-        performRequest(urlString)
+        if SpecificWordCount(str: cityName).0 == 1 {
+            let urlString = "\(weatherURL)&q=\(cityName)"
+            performRequest(urlString)
+        } else {
+            let concatCityName = SpecificWordCount(str: cityName).1.joined(separator: "%20")
+            let urlString = "\(weatherURL)&q=\(concatCityName)"
+            performRequest(urlString)
+        }
     }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
@@ -69,5 +75,11 @@ struct WeatherManager {
         }
     }
     
+    func SpecificWordCount(str:String) ->(Int, [String]) {
+        let components = str.components(separatedBy: .whitespacesAndNewlines)
+        let words = components.filter { !$0.isEmpty }
+        return (words.count, words)
+        
+    }
     
 }

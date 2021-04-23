@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Иллюстрация_без_названия 3.png",
+      "filename" : "morning.png",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Иллюстрация_без_названия 3-1.png",
+      "filename" : "morning-1.png",
       "idiom" : "universal"
     },
     {
@@ -21,7 +21,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "вечер2.png",
+      "filename" : "evening.png",
       "idiom" : "universal"
     }
   ],
