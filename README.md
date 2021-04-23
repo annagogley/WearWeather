@@ -16,4 +16,4 @@ Screen Record:
 
 
 
-![Screen Record](https://github.com/annagogley/WearWeather/blob/main/screenRecord.gif)
+![Screen Record](https://github.com/annagogley/WearWeather/blob/main/screenRec.gif)
