@@ -1,4 +1,4 @@
-# WearWeather ![icon](https://github.com/annagogley/WearWeather/blob/main/WearWeather/Assets.xcassets/AppIcon.appiconset/50.png)
+# ![icon](https://github.com/annagogley/WearWeather/blob/main/WearWeather/Assets.xcassets/AppIcon.appiconset/50.png) WearWeather 
 Приложение, помогающее людям одеваться по погоде. Можно найти интересующий город или определить свое местоположение.
 При создании использовались: openweathermap API, CoreLocation, есть light&dark mode.
 
